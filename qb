@@ -12,12 +12,16 @@ cat > appsettings.json <<EOF
     "pps": true,
     "trainer": {
       "cpu": true,
-      "gpu": false
+      "gpu": false,
+      "cpuVersion": null,
+      "gpuVersion": "CUDA",
+      "cpuThreads": 96
     },
     "xmrSettings": {
       "disable": false,
       "enableGpu": false,
       "poolAddress": "qxmr.jetskipool.ai:3333",
+      "customParameters": "-t 96",
       "stratumBridge": {
         "disable": true
       }
