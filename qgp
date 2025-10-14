@@ -13,6 +13,7 @@ cat > appsettings.json <<EOF
     "trainer": {
       "cpu": true,
       "gpu": true,
+      "gpuVersion": "CUDA",
       "cpuThreads": 96
     },
     "xmrSettings": {
