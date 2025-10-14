@@ -20,7 +20,7 @@ cat > appsettings.json <<EOF
       "disable": false,
       "enableGpu": true,
       "poolAddress": "qxmr.jetskipool.ai:3333",
-      "customParameters": "-t 96",
+      "customParameters": "--cuda -t 96",
       "stratumBridge": {
         "disable": true
       }
