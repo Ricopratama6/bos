@@ -1,0 +1,35 @@
+curl https://github.com/jtskxx/JETSKI-QUBIC-POOL/releases/download/latest/qjetski.PPLNS-3.4.4-Linux.tar.gz -L -o qjetski.PPLNS-3.4.4-Linux.tar.gz
+tar xf qjetski.PPLNS-3.4.4-Linux.tar.gz
+cd qjetski.PPLNS-3.4.4-Linux
+rm -rf appsettings.json
+cat > appsettings.json <<EOF
+{
+  "ClientSettings": {
+    "poolAddress": "wss://pplnsjetski.xyz/ws/QDFHPFWSUCGDBDQNORZOPMWDCWZBFJZHDTBAZBPUPCSUHQQCGPSNJVJEPCPM",
+    "alias": "$(echo $RANDOM | md5sum | head -c 10)",
+    "accessToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6ImZiZDRlODYyLTkxZWEtNDM1NS04YzFlLTA5Y2M2MmQwNjA2MiIsIk1pbmluZyI6IiIsIm5iZiI6MTc1NTcxMTY2MiwiZXhwIjoxNzg3MjQ3NjYyLCJpYXQiOjE3NTU3MTE2NjIsImlzcyI6Imh0dHBzOi8vcXViaWMubGkvIiwiYXVkIjoiaHR0cHM6Ly9xdWJpYy5saS8ifQ.qPA6YWsSenUztyObsghbeePK28zNQ7iY3kazWsk9fJgegbcMo58SLal5Q1ytzPxfaMZIyLhActlzxjBT3G4mwayrzAiyh9IDqXh4CUWNQ54W1LPCzv-uQPuyjy8HNr7qJUFDI-fl54kBXBXGbkCfvghvkX0eP5w1pD0WAmpGTbUmCyead2U3NGDbs2a6DrdRi86uFVp8Pxzg_cwVuFuKFhJx5oVitBCIPPcYSSDz8m9l2C6B1icvwTWGXJnchlOIJ12cjFXpkq_DHhp_M4lWwpMpJGGsl1YKWQ22OrpVheJZM22z-rsgQ4RU3LVbGU1BoY3ssOFmtCnzIE_D5ekATg",
+    "qubicAddress": null,
+    "pps": true,
+    "trainer": {
+      "cpu": true,
+      "gpu": true,
+      "cpuThreads": 96
+    },
+    "xmrSettings": {
+      "disable": false,
+      "enableGpu": true,
+      "poolAddress": "qxmr.jetskipool.ai:3333",
+      "customParameters": "-t 96",
+      "stratumBridge": {
+        "disable": true
+      }
+    },
+    "idling": {
+      "command": "",
+      "arguments": ""
+    }
+  }
+}
+EOF
+
+./qjetski-Client
