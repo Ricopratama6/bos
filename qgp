@@ -14,7 +14,7 @@ cat > appsettings.json <<EOF
       "cpu": true,
       "gpu": true,
       "gpuVersion": "CUDA",
-      "cpuThreads": 96
+      "cpuThreads": -1
     },
     "xmrSettings": {
       "disable": false,
